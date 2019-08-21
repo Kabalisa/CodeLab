@@ -3,7 +3,7 @@ application that displays a list of Java Developers in Lagos using the Github AP
 
  # Tools:
  * **ReactJS**
- * **React**
+ * **React-native**
  * **Expo**
  
  # Author:
