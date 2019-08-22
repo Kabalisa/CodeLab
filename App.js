@@ -1,19 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import HomeScreen from './src/screens/homeScreen';
+import LoginScreen from './src/screens/loginScreen';
+import ListScreen from './src/screens/listScreen';
+import ProfileScreen from './src/screens/profileScreen';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const navigator = createStackNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: { title: 'WELCOME' }
+    },
+    Login: { screen: LoginScreen, navigationOptions: { title: 'LOGIN' } },
+    List: { screen: ListScreen, navigationOptions: { title: 'HOME' } },
+    Profile: { screen: ProfileScreen, navigationOptions: { title: 'PROFILE' } }
   },
-});
+  { initialRouteName: 'Home' }
+);
+
+export default createAppContainer(navigator);
