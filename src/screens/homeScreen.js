@@ -6,14 +6,15 @@ import {
   Image,
   TouchableHighlight
 } from 'react-native';
-import Header from '../components/header';
 import homeImage from '../../assets/homeImage.jpg';
 import arrow from '../../assets/whiteArrow.png';
 
 const HomeScreen = ({ navigation }) => {
   return (
     <View>
-      <Header />
+      <View style={styles.headerStyle}>
+        <Text style={styles.headerTextStyle}>CodeLab</Text>
+      </View>
       <Text style={styles.textStyle}>Find Java Developers In Lagos</Text>
       <TouchableHighlight
         style={styles.highlightStyle}
@@ -29,6 +30,20 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  headerStyle: {
+    height: 85,
+    flexDirection: 'row',
+    borderBottomColor: '#5075D4',
+    borderBottomWidth: 1
+  },
+  headerTextStyle: {
+    color: '#5075D4',
+    fontSize: 24,
+    fontWeight: 'bold',
+    alignSelf: 'flex-end',
+    bottom: 8,
+    left: 8
+  },
   viewStyle: {
     height: 723,
     bottom: 64

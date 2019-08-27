@@ -10,7 +10,7 @@ class ListScreen extends Component {
     const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
     return (
       <View>
-        <Header />
+        <Header navigation={navigation} />
         <View style={styles.viewStyle}>
           <Text style={styles.textStyle}>Java Developers In Lagos:</Text>
           <View style={styles.viewCardStyle}>

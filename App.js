@@ -11,7 +11,10 @@ const navigator = createStackNavigator(
       navigationOptions: { title: 'WELCOME' }
     },
     Login: { screen: LoginScreen, navigationOptions: { title: 'LOGIN' } },
-    List: { screen: ListScreen, navigationOptions: { title: 'HOME' } },
+    List: {
+      screen: ListScreen,
+      navigationOptions: { title: 'HOME', headerLeft: null }
+    },
     Profile: { screen: ProfileScreen, navigationOptions: { title: 'PROFILE' } }
   },
   { initialRouteName: 'Home' }

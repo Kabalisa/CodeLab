@@ -5,9 +5,10 @@ import Footer from '../components/footer';
 import userAvatar from '../../assets/userAvatar.png';
 class ProfileScreen extends Component {
   render() {
+    const { navigation } = this.props;
     return (
       <View>
-        <Header />
+        <Header navigation={navigation} />
         <View style={styles.viewStyle}>
           <Image source={userAvatar} style={styles.imageStyle} />
           <Text style={styles.usernameStyle}>Username</Text>
