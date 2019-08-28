@@ -1,13 +1,44 @@
-import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import React, { Component } from 'react';
+import {
+  Text,
+  View,
+  StyleSheet,
+  AsyncStorage,
+  TouchableHighlight
+} from 'react-native';
+import firebase from 'firebase';
+import initializeFirebase from '../helpers/firebaseConfig';
+const GithubStorageKey = 'githubtoken';
+class Header extends Component {
+  componentDidMount() {
+    initializeFirebase();
+  }
 
-const Header = () => {
-  return (
-    <View style={styles.headerStyle}>
-      <Text style={styles.headerTextStyle}>CodeLab</Text>
-    </View>
-  );
-};
+  signOut = async () => {
+    try {
+      await AsyncStorage.removeItem(GithubStorageKey);
+      await firebase.auth().signOut();
+      this.props.navigation.navigate('Login');
+    } catch ({ message }) {
+      alert('Error: ' + message);
+    }
+  };
+  render() {
+    return (
+      <View style={styles.headerStyle}>
+        <Text style={styles.headerTextStyle}>CodeLab</Text>
+        <TouchableHighlight
+          onPress={() => this.signOut()}
+          style={styles.logoutStyle}
+        >
+          <View style={styles.logoutViewStyle}>
+            <Text style={styles.logoutTextStyle}>Log Out</Text>
+          </View>
+        </TouchableHighlight>
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   headerStyle: {
@@ -23,6 +54,20 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     bottom: 8,
     left: 8
+  },
+  logoutStyle: {
+    marginLeft: 240,
+    marginTop: 20
+  },
+  logoutViewStyle: {
+    borderWidth: 1,
+    borderColor: '#5075D4',
+    padding: 4,
+    backgroundColor: '#5075D4'
+  },
+  logoutTextStyle: {
+    color: 'white',
+    fontSize: 16
   }
 });
 

@@ -4,20 +4,69 @@ import {
   Text,
   Image,
   StyleSheet,
-  TouchableHighlight
+  TouchableHighlight,
+  AsyncStorage
 } from 'react-native';
+import firebase from 'firebase';
 import Footer from '../components/footer';
-import Header from '../components/header';
 import icon from '../../assets/github-512.png';
+import initializeFirebase from '../helpers/firebaseConfig';
+import getGithubToken from '../helpers/getGithubToken';
+
+const GithubStorageKey = 'githubtoken';
+const signIn = async token => {
+  try {
+    if (!token) {
+      const token = await getGithubToken();
+      if (token) {
+        await AsyncStorage.setItem(GithubStorageKey, token);
+        return signIn(token);
+      } else {
+        return;
+      }
+    }
+    const credential = firebase.auth.GithubAuthProvider.credential(token);
+    return firebase.auth().signInWithCredential(credential);
+  } catch ({ message }) {
+    alert(message);
+  }
+};
+
+const attemptToRestoreAuth = async () => {
+  let token = await AsyncStorage.getItem(GithubStorageKey);
+  if (token) {
+    return signIn(token);
+  }
+};
 
 class LoginScreen extends Component {
-  render() {
+  state = { isSignedIn: false };
+
+  componentDidMount() {
+    this.setupFirebase();
+  }
+
+  setupFirebase = async () => {
     const { navigation } = this.props;
+    initializeFirebase();
+
+    firebase.auth().onAuthStateChanged(async auth => {
+      const isSignedIn = !!auth;
+      this.setState({ isSignedIn });
+      isSignedIn && navigation.navigate('List');
+      if (!isSignedIn) {
+        attemptToRestoreAuth();
+      }
+    });
+  };
+  render() {
     return (
       <View>
-        <Header />
+        <View style={styles.headerStyle}>
+          <Text style={styles.headerTextStyle}>CodeLab</Text>
+        </View>
         <View style={styles.parentStyle}>
-          <TouchableHighlight onPress={() => navigation.navigate('List')}>
+          <TouchableHighlight onPress={() => signIn()}>
             <View style={styles.viewStyle}>
               <Text style={styles.textstyle}>Login With</Text>
               <Image source={icon} style={styles.imageStyle} />
@@ -31,6 +80,20 @@ class LoginScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  headerStyle: {
+    height: 85,
+    flexDirection: 'row',
+    borderBottomColor: '#5075D4',
+    borderBottomWidth: 1
+  },
+  headerTextStyle: {
+    color: '#5075D4',
+    fontSize: 24,
+    fontWeight: 'bold',
+    alignSelf: 'flex-end',
+    bottom: 8,
+    left: 8
+  },
   parentStyle: {
     flexDirection: 'column',
     alignItems: 'center',
