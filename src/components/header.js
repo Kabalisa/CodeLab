@@ -4,7 +4,7 @@ import {
   View,
   StyleSheet,
   AsyncStorage,
-  TouchableHighlight
+  TouchableOpacity
 } from 'react-native';
 import firebase from 'firebase';
 import initializeFirebase from '../helpers/firebaseConfig';
@@ -27,14 +27,14 @@ class Header extends Component {
     return (
       <View style={styles.headerStyle}>
         <Text style={styles.headerTextStyle}>CodeLab</Text>
-        <TouchableHighlight
+        <TouchableOpacity
           onPress={() => this.signOut()}
           style={styles.logoutStyle}
         >
           <View style={styles.logoutViewStyle}>
             <Text style={styles.logoutTextStyle}>Log Out</Text>
           </View>
-        </TouchableHighlight>
+        </TouchableOpacity>
       </View>
     );
   }

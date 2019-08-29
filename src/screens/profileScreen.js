@@ -1,9 +1,27 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet } from 'react-native';
+import {
+  Text,
+  View,
+  Image,
+  StyleSheet,
+  Share,
+  TouchableOpacity
+} from 'react-native';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import userAvatar from '../../assets/userAvatar.png';
 class ProfileScreen extends Component {
+  handleShare = async username => {
+    const githubUrl = `https://github.com/${username}`;
+    try {
+      await Share.share({
+        message: `Check out this awesome developer @${username}, ${githubUrl}`,
+        title: 'Lagos developer'
+      });
+    } catch (error) {
+      alert(error.message);
+    }
+  };
   render() {
     const { navigation } = this.props;
     const item = navigation.getParam('item');
@@ -32,9 +50,11 @@ class ProfileScreen extends Component {
             </Text>
             <Text style={styles.textFourStyle}>starring</Text>
           </View>
-          <View style={styles.buttonStyle}>
-            <Text style={styles.textstyle}>Share Profile</Text>
-          </View>
+          <TouchableOpacity onPress={() => this.handleShare(item.node.login)}>
+            <View style={styles.buttonStyle}>
+              <Text style={styles.textstyle}>Share Profile</Text>
+            </View>
+          </TouchableOpacity>
         </View>
         <Footer />
       </View>
