@@ -11,7 +11,9 @@ import userAvatar from '../../assets/userAvatar.png';
 const UserCard = ({ navigation, item }) => {
   return (
     <View style={styles.viewStyle}>
-      <TouchableHighlight onPress={() => navigation.navigate('Profile')}>
+      <TouchableHighlight
+        onPress={() => navigation.navigate('Profile', { item })}
+      >
         <Image
           source={{ uri: item.node.avatarUrl }}
           style={styles.imageStyle}
@@ -19,7 +21,7 @@ const UserCard = ({ navigation, item }) => {
       </TouchableHighlight>
       <TouchableHighlight
         style={styles.touchableStyle}
-        onPress={() => navigation.navigate('Profile')}
+        onPress={() => navigation.navigate('Profile', { item })}
       >
         <Text style={styles.textStyle}>{item.node.login}</Text>
       </TouchableHighlight>
