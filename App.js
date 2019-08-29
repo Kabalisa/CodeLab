@@ -1,23 +1,22 @@
-import { createStackNavigator, createAppContainer } from 'react-navigation';
-import HomeScreen from './src/screens/homeScreen';
-import LoginScreen from './src/screens/loginScreen';
-import ListScreen from './src/screens/listScreen';
-import ProfileScreen from './src/screens/profileScreen';
+import React from 'react';
+import Routes from './src/components/routes';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
 
-const navigator = createStackNavigator(
-  {
-    Home: {
-      screen: HomeScreen,
-      navigationOptions: { title: 'WELCOME' }
-    },
-    Login: { screen: LoginScreen, navigationOptions: { title: 'LOGIN' } },
-    List: {
-      screen: ListScreen,
-      navigationOptions: { title: 'HOME', headerLeft: null }
-    },
-    Profile: { screen: ProfileScreen, navigationOptions: { title: 'PROFILE' } }
-  },
-  { initialRouteName: 'Home' }
-);
+const token = process.env.GITHUB_TOKEN;
+const client = new ApolloClient({
+  uri: 'https://api.github.com/graphql',
+  headers: {
+    Authorization: token
+  }
+});
 
-export default createAppContainer(navigator);
+const App = () => {
+  return (
+    <ApolloProvider client={client}>
+      <Routes />
+    </ApolloProvider>
+  );
+};
+
+export default App;

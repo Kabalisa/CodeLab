@@ -8,17 +8,20 @@ import {
 } from 'react-native';
 import userAvatar from '../../assets/userAvatar.png';
 
-const UserCard = ({ navigation }) => {
+const UserCard = ({ navigation, item }) => {
   return (
     <View style={styles.viewStyle}>
       <TouchableHighlight onPress={() => navigation.navigate('Profile')}>
-        <Image source={userAvatar} style={styles.imageStyle} />
+        <Image
+          source={{ uri: item.node.avatarUrl }}
+          style={styles.imageStyle}
+        />
       </TouchableHighlight>
       <TouchableHighlight
         style={styles.touchableStyle}
         onPress={() => navigation.navigate('Profile')}
       >
-        <Text style={styles.textStyle}>username</Text>
+        <Text style={styles.textStyle}>{item.node.login}</Text>
       </TouchableHighlight>
     </View>
   );
@@ -31,7 +34,8 @@ const styles = StyleSheet.create({
   },
   imageStyle: {
     width: 70,
-    height: 70
+    height: 70,
+    borderRadius: 35
   },
   textStyle: {
     fontSize: 18,
