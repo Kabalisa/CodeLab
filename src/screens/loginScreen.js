@@ -4,7 +4,7 @@ import {
   Text,
   Image,
   StyleSheet,
-  TouchableHighlight,
+  TouchableOpacity,
   AsyncStorage
 } from 'react-native';
 import firebase from 'firebase';
@@ -66,12 +66,12 @@ class LoginScreen extends Component {
           <Text style={styles.headerTextStyle}>CodeLab</Text>
         </View>
         <View style={styles.parentStyle}>
-          <TouchableHighlight onPress={() => signIn()}>
+          <TouchableOpacity onPress={() => signIn()}>
             <View style={styles.viewStyle}>
               <Text style={styles.textstyle}>Login With</Text>
               <Image source={icon} style={styles.imageStyle} />
             </View>
-          </TouchableHighlight>
+          </TouchableOpacity>
         </View>
         <Footer />
       </View>

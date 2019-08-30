@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  TouchableHighlight
-} from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import homeImage from '../../assets/homeImage.jpg';
 import arrow from '../../assets/whiteArrow.png';
 
@@ -16,12 +10,12 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.headerTextStyle}>CodeLab</Text>
       </View>
       <Text style={styles.textStyle}>Find Java Developers In Lagos</Text>
-      <TouchableHighlight
+      <TouchableOpacity
         style={styles.highlightStyle}
         onPress={() => navigation.navigate('Login')}
       >
         <Image source={arrow} style={styles.arrowStyle} />
-      </TouchableHighlight>
+      </TouchableOpacity>
       <View style={styles.viewStyle}>
         <Image source={homeImage} style={styles.imageStyle} />
       </View>

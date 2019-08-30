@@ -1,30 +1,24 @@
 import React from 'react';
-import {
-  Image,
-  Text,
-  View,
-  StyleSheet,
-  TouchableHighlight
-} from 'react-native';
+import { Image, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import userAvatar from '../../assets/userAvatar.png';
 
 const UserCard = ({ navigation, item }) => {
   return (
     <View style={styles.viewStyle}>
-      <TouchableHighlight
+      <TouchableOpacity
         onPress={() => navigation.navigate('Profile', { item })}
       >
         <Image
           source={{ uri: item.node.avatarUrl }}
           style={styles.imageStyle}
         />
-      </TouchableHighlight>
-      <TouchableHighlight
+      </TouchableOpacity>
+      <TouchableOpacity
         style={styles.touchableStyle}
         onPress={() => navigation.navigate('Profile', { item })}
       >
         <Text style={styles.textStyle}>{item.node.login}</Text>
-      </TouchableHighlight>
+      </TouchableOpacity>
     </View>
   );
 };
