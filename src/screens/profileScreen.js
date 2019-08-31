@@ -7,9 +7,9 @@ import {
   Share,
   TouchableOpacity
 } from 'react-native';
+import * as WebBrowser from 'expo-web-browser';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import userAvatar from '../../assets/userAvatar.png';
 class ProfileScreen extends Component {
   handleShare = async username => {
     const githubUrl = `https://github.com/${username}`;
@@ -22,9 +22,14 @@ class ProfileScreen extends Component {
       alert(error.message);
     }
   };
+
+  handleOpenBrowser = async url => {
+    await WebBrowser.openBrowserAsync(url);
+  };
   render() {
     const { navigation } = this.props;
     const item = navigation.getParam('item');
+    const url = `https://github.com/${item.node.login}`;
     return (
       <View>
         <Header navigation={navigation} />
@@ -35,9 +40,9 @@ class ProfileScreen extends Component {
           />
           <Text style={styles.usernameStyle}>{item.node.login}</Text>
           <Text style={styles.textOneStyle}>Github URL:</Text>
-          <Text
-            style={styles.textTwoStyle}
-          >{`https://github.com/${item.node.login}`}</Text>
+          <TouchableOpacity onPress={() => this.handleOpenBrowser(url)}>
+            <Text style={styles.textTwoStyle}>{url}</Text>
+          </TouchableOpacity>
           <View style={styles.viewOneStyle}>
             <Text style={styles.textThreeStyle}>
               {item.node.repositories.totalCount}
