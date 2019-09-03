@@ -1,0 +1,1264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListScreen tests should render with mocked query 1`] = `
+<ApolloProvider
+  client={
+    ApolloClient {
+      "cache": InMemoryCache {
+        "addTypename": false,
+        "cacheKeyRoot": KeyTrie {
+          "weakness": true,
+        },
+        "config": Object {
+          "addTypename": false,
+          "dataIdFromObject": [Function],
+          "fragmentMatcher": HeuristicFragmentMatcher {},
+          "freezeResults": false,
+          "resultCaching": true,
+        },
+        "data": DepTrackingCache {
+          "data": Object {},
+          "depend": [Function],
+        },
+        "maybeBroadcastWatch": [Function],
+        "optimisticData": DepTrackingCache {
+          "data": Object {},
+          "depend": [Function],
+        },
+        "silenceBroadcast": false,
+        "storeReader": StoreReader {
+          "executeSelectionSet": [Function],
+          "executeStoreQuery": [Function],
+          "executeSubSelectedArray": [Function],
+          "freezeResults": false,
+        },
+        "storeWriter": StoreWriter {},
+        "typenameDocumentCache": Map {},
+        "watches": Set {},
+      },
+      "clearStoreCallbacks": Array [],
+      "defaultOptions": Object {},
+      "disableNetworkFetches": false,
+      "link": MockLink {
+        "addTypename": false,
+        "mockedResponsesByKey": Object {
+          "{\\"query\\":\\"{\\\\n  search(query: \\\\\\"location:lagos\\\\\\", type: USER, first: 100) {\\\\n    userCount\\\\n    edges {\\\\n      node {\\\\n        ... on User {\\\\n          name\\\\n          login\\\\n          avatarUrl\\\\n          starredRepositories {\\\\n            totalCount\\\\n          }\\\\n          repositories {\\\\n            totalCount\\\\n          }\\\\n          followers {\\\\n            totalCount\\\\n          }\\\\n          following {\\\\n            totalCount\\\\n          }\\\\n          projects {\\\\n            totalCount\\\\n          }\\\\n        }\\\\n      }\\\\n    }\\\\n  }\\\\n  viewer {\\\\n    avatarUrl\\\\n  }\\\\n}\\\\n\\"}": Array [
+            Object {
+              "request": Object {
+                "query": Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": undefined,
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [
+                              Object {
+                                "kind": "Argument",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "query",
+                                },
+                                "value": Object {
+                                  "block": false,
+                                  "kind": "StringValue",
+                                  "value": "location:lagos",
+                                },
+                              },
+                              Object {
+                                "kind": "Argument",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "type",
+                                },
+                                "value": Object {
+                                  "kind": "EnumValue",
+                                  "value": "USER",
+                                },
+                              },
+                              Object {
+                                "kind": "Argument",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "first",
+                                },
+                                "value": Object {
+                                  "kind": "IntValue",
+                                  "value": "100",
+                                },
+                              },
+                            ],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "search",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "userCount",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "edges",
+                                  },
+                                  "selectionSet": Object {
+                                    "kind": "SelectionSet",
+                                    "selections": Array [
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "node",
+                                        },
+                                        "selectionSet": Object {
+                                          "kind": "SelectionSet",
+                                          "selections": Array [
+                                            Object {
+                                              "directives": Array [],
+                                              "kind": "InlineFragment",
+                                              "selectionSet": Object {
+                                                "kind": "SelectionSet",
+                                                "selections": Array [
+                                                  Object {
+                                                    "alias": undefined,
+                                                    "arguments": Array [],
+                                                    "directives": Array [],
+                                                    "kind": "Field",
+                                                    "name": Object {
+                                                      "kind": "Name",
+                                                      "value": "name",
+                                                    },
+                                                    "selectionSet": undefined,
+                                                  },
+                                                  Object {
+                                                    "alias": undefined,
+                                                    "arguments": Array [],
+                                                    "directives": Array [],
+                                                    "kind": "Field",
+                                                    "name": Object {
+                                                      "kind": "Name",
+                                                      "value": "login",
+                                                    },
+                                                    "selectionSet": undefined,
+                                                  },
+                                                  Object {
+                                                    "alias": undefined,
+                                                    "arguments": Array [],
+                                                    "directives": Array [],
+                                                    "kind": "Field",
+                                                    "name": Object {
+                                                      "kind": "Name",
+                                                      "value": "avatarUrl",
+                                                    },
+                                                    "selectionSet": undefined,
+                                                  },
+                                                  Object {
+                                                    "alias": undefined,
+                                                    "arguments": Array [],
+                                                    "directives": Array [],
+                                                    "kind": "Field",
+                                                    "name": Object {
+                                                      "kind": "Name",
+                                                      "value": "starredRepositories",
+                                                    },
+                                                    "selectionSet": Object {
+                                                      "kind": "SelectionSet",
+                                                      "selections": Array [
+                                                        Object {
+                                                          "alias": undefined,
+                                                          "arguments": Array [],
+                                                          "directives": Array [],
+                                                          "kind": "Field",
+                                                          "name": Object {
+                                                            "kind": "Name",
+                                                            "value": "totalCount",
+                                                          },
+                                                          "selectionSet": undefined,
+                                                        },
+                                                      ],
+                                                    },
+                                                  },
+                                                  Object {
+                                                    "alias": undefined,
+                                                    "arguments": Array [],
+                                                    "directives": Array [],
+                                                    "kind": "Field",
+                                                    "name": Object {
+                                                      "kind": "Name",
+                                                      "value": "repositories",
+                                                    },
+                                                    "selectionSet": Object {
+                                                      "kind": "SelectionSet",
+                                                      "selections": Array [
+                                                        Object {
+                                                          "alias": undefined,
+                                                          "arguments": Array [],
+                                                          "directives": Array [],
+                                                          "kind": "Field",
+                                                          "name": Object {
+                                                            "kind": "Name",
+                                                            "value": "totalCount",
+                                                          },
+                                                          "selectionSet": undefined,
+                                                        },
+                                                      ],
+                                                    },
+                                                  },
+                                                  Object {
+                                                    "alias": undefined,
+                                                    "arguments": Array [],
+                                                    "directives": Array [],
+                                                    "kind": "Field",
+                                                    "name": Object {
+                                                      "kind": "Name",
+                                                      "value": "followers",
+                                                    },
+                                                    "selectionSet": Object {
+                                                      "kind": "SelectionSet",
+                                                      "selections": Array [
+                                                        Object {
+                                                          "alias": undefined,
+                                                          "arguments": Array [],
+                                                          "directives": Array [],
+                                                          "kind": "Field",
+                                                          "name": Object {
+                                                            "kind": "Name",
+                                                            "value": "totalCount",
+                                                          },
+                                                          "selectionSet": undefined,
+                                                        },
+                                                      ],
+                                                    },
+                                                  },
+                                                  Object {
+                                                    "alias": undefined,
+                                                    "arguments": Array [],
+                                                    "directives": Array [],
+                                                    "kind": "Field",
+                                                    "name": Object {
+                                                      "kind": "Name",
+                                                      "value": "following",
+                                                    },
+                                                    "selectionSet": Object {
+                                                      "kind": "SelectionSet",
+                                                      "selections": Array [
+                                                        Object {
+                                                          "alias": undefined,
+                                                          "arguments": Array [],
+                                                          "directives": Array [],
+                                                          "kind": "Field",
+                                                          "name": Object {
+                                                            "kind": "Name",
+                                                            "value": "totalCount",
+                                                          },
+                                                          "selectionSet": undefined,
+                                                        },
+                                                      ],
+                                                    },
+                                                  },
+                                                  Object {
+                                                    "alias": undefined,
+                                                    "arguments": Array [],
+                                                    "directives": Array [],
+                                                    "kind": "Field",
+                                                    "name": Object {
+                                                      "kind": "Name",
+                                                      "value": "projects",
+                                                    },
+                                                    "selectionSet": Object {
+                                                      "kind": "SelectionSet",
+                                                      "selections": Array [
+                                                        Object {
+                                                          "alias": undefined,
+                                                          "arguments": Array [],
+                                                          "directives": Array [],
+                                                          "kind": "Field",
+                                                          "name": Object {
+                                                            "kind": "Name",
+                                                            "value": "totalCount",
+                                                          },
+                                                          "selectionSet": undefined,
+                                                        },
+                                                      ],
+                                                    },
+                                                  },
+                                                ],
+                                              },
+                                              "typeCondition": Object {
+                                                "kind": "NamedType",
+                                                "name": Object {
+                                                  "kind": "Name",
+                                                  "value": "User",
+                                                },
+                                              },
+                                            },
+                                          ],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "viewer",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "avatarUrl",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 601,
+                    "start": 0,
+                  },
+                },
+              },
+              "result": Object {
+                "data": Object {
+                  "search": Object {
+                    "edges": Array [
+                      Object {
+                        "node": Object {
+                          "avatarUrl": "https://avatars1.githubusercontent.com/u/2946769?v=4",
+                          "followers": Object {
+                            "totalCount": 2251,
+                          },
+                          "following": Object {
+                            "totalCount": 68,
+                          },
+                          "login": "login",
+                          "name": "name",
+                          "projects": Object {
+                            "totalCount": 0,
+                          },
+                          "repositories": Object {
+                            "totalCount": 172,
+                          },
+                          "starredRepositories": Object {
+                            "totalCount": 648,
+                          },
+                        },
+                      },
+                    ],
+                  },
+                },
+              },
+            },
+          ],
+        },
+      },
+      "localState": LocalState {
+        "cache": InMemoryCache {
+          "addTypename": false,
+          "cacheKeyRoot": KeyTrie {
+            "weakness": true,
+          },
+          "config": Object {
+            "addTypename": false,
+            "dataIdFromObject": [Function],
+            "fragmentMatcher": HeuristicFragmentMatcher {},
+            "freezeResults": false,
+            "resultCaching": true,
+          },
+          "data": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "maybeBroadcastWatch": [Function],
+          "optimisticData": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "silenceBroadcast": false,
+          "storeReader": StoreReader {
+            "executeSelectionSet": [Function],
+            "executeStoreQuery": [Function],
+            "executeSubSelectedArray": [Function],
+            "freezeResults": false,
+          },
+          "storeWriter": StoreWriter {},
+          "typenameDocumentCache": Map {},
+          "watches": Set {},
+        },
+        "client": [Circular],
+      },
+      "mutate": [Function],
+      "query": [Function],
+      "queryDeduplication": true,
+      "queryManager": QueryManager {
+        "assumeImmutableResults": false,
+        "clientAwareness": Object {
+          "name": undefined,
+          "version": undefined,
+        },
+        "dataStore": DataStore {
+          "cache": InMemoryCache {
+            "addTypename": false,
+            "cacheKeyRoot": KeyTrie {
+              "weakness": true,
+            },
+            "config": Object {
+              "addTypename": false,
+              "dataIdFromObject": [Function],
+              "fragmentMatcher": HeuristicFragmentMatcher {},
+              "freezeResults": false,
+              "resultCaching": true,
+            },
+            "data": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "maybeBroadcastWatch": [Function],
+            "optimisticData": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "silenceBroadcast": false,
+            "storeReader": StoreReader {
+              "executeSelectionSet": [Function],
+              "executeStoreQuery": [Function],
+              "executeSubSelectedArray": [Function],
+              "freezeResults": false,
+            },
+            "storeWriter": StoreWriter {},
+            "typenameDocumentCache": Map {},
+            "watches": Set {},
+          },
+        },
+        "fetchQueryRejectFns": Map {},
+        "idCounter": 1,
+        "inFlightLinkObservables": Map {},
+        "link": MockLink {
+          "addTypename": false,
+          "mockedResponsesByKey": Object {
+            "{\\"query\\":\\"{\\\\n  search(query: \\\\\\"location:lagos\\\\\\", type: USER, first: 100) {\\\\n    userCount\\\\n    edges {\\\\n      node {\\\\n        ... on User {\\\\n          name\\\\n          login\\\\n          avatarUrl\\\\n          starredRepositories {\\\\n            totalCount\\\\n          }\\\\n          repositories {\\\\n            totalCount\\\\n          }\\\\n          followers {\\\\n            totalCount\\\\n          }\\\\n          following {\\\\n            totalCount\\\\n          }\\\\n          projects {\\\\n            totalCount\\\\n          }\\\\n        }\\\\n      }\\\\n    }\\\\n  }\\\\n  viewer {\\\\n    avatarUrl\\\\n  }\\\\n}\\\\n\\"}": Array [
+              Object {
+                "request": Object {
+                  "query": Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": undefined,
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "query",
+                                  },
+                                  "value": Object {
+                                    "block": false,
+                                    "kind": "StringValue",
+                                    "value": "location:lagos",
+                                  },
+                                },
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "type",
+                                  },
+                                  "value": Object {
+                                    "kind": "EnumValue",
+                                    "value": "USER",
+                                  },
+                                },
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "first",
+                                  },
+                                  "value": Object {
+                                    "kind": "IntValue",
+                                    "value": "100",
+                                  },
+                                },
+                              ],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "search",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "userCount",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "edges",
+                                    },
+                                    "selectionSet": Object {
+                                      "kind": "SelectionSet",
+                                      "selections": Array [
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "node",
+                                          },
+                                          "selectionSet": Object {
+                                            "kind": "SelectionSet",
+                                            "selections": Array [
+                                              Object {
+                                                "directives": Array [],
+                                                "kind": "InlineFragment",
+                                                "selectionSet": Object {
+                                                  "kind": "SelectionSet",
+                                                  "selections": Array [
+                                                    Object {
+                                                      "alias": undefined,
+                                                      "arguments": Array [],
+                                                      "directives": Array [],
+                                                      "kind": "Field",
+                                                      "name": Object {
+                                                        "kind": "Name",
+                                                        "value": "name",
+                                                      },
+                                                      "selectionSet": undefined,
+                                                    },
+                                                    Object {
+                                                      "alias": undefined,
+                                                      "arguments": Array [],
+                                                      "directives": Array [],
+                                                      "kind": "Field",
+                                                      "name": Object {
+                                                        "kind": "Name",
+                                                        "value": "login",
+                                                      },
+                                                      "selectionSet": undefined,
+                                                    },
+                                                    Object {
+                                                      "alias": undefined,
+                                                      "arguments": Array [],
+                                                      "directives": Array [],
+                                                      "kind": "Field",
+                                                      "name": Object {
+                                                        "kind": "Name",
+                                                        "value": "avatarUrl",
+                                                      },
+                                                      "selectionSet": undefined,
+                                                    },
+                                                    Object {
+                                                      "alias": undefined,
+                                                      "arguments": Array [],
+                                                      "directives": Array [],
+                                                      "kind": "Field",
+                                                      "name": Object {
+                                                        "kind": "Name",
+                                                        "value": "starredRepositories",
+                                                      },
+                                                      "selectionSet": Object {
+                                                        "kind": "SelectionSet",
+                                                        "selections": Array [
+                                                          Object {
+                                                            "alias": undefined,
+                                                            "arguments": Array [],
+                                                            "directives": Array [],
+                                                            "kind": "Field",
+                                                            "name": Object {
+                                                              "kind": "Name",
+                                                              "value": "totalCount",
+                                                            },
+                                                            "selectionSet": undefined,
+                                                          },
+                                                        ],
+                                                      },
+                                                    },
+                                                    Object {
+                                                      "alias": undefined,
+                                                      "arguments": Array [],
+                                                      "directives": Array [],
+                                                      "kind": "Field",
+                                                      "name": Object {
+                                                        "kind": "Name",
+                                                        "value": "repositories",
+                                                      },
+                                                      "selectionSet": Object {
+                                                        "kind": "SelectionSet",
+                                                        "selections": Array [
+                                                          Object {
+                                                            "alias": undefined,
+                                                            "arguments": Array [],
+                                                            "directives": Array [],
+                                                            "kind": "Field",
+                                                            "name": Object {
+                                                              "kind": "Name",
+                                                              "value": "totalCount",
+                                                            },
+                                                            "selectionSet": undefined,
+                                                          },
+                                                        ],
+                                                      },
+                                                    },
+                                                    Object {
+                                                      "alias": undefined,
+                                                      "arguments": Array [],
+                                                      "directives": Array [],
+                                                      "kind": "Field",
+                                                      "name": Object {
+                                                        "kind": "Name",
+                                                        "value": "followers",
+                                                      },
+                                                      "selectionSet": Object {
+                                                        "kind": "SelectionSet",
+                                                        "selections": Array [
+                                                          Object {
+                                                            "alias": undefined,
+                                                            "arguments": Array [],
+                                                            "directives": Array [],
+                                                            "kind": "Field",
+                                                            "name": Object {
+                                                              "kind": "Name",
+                                                              "value": "totalCount",
+                                                            },
+                                                            "selectionSet": undefined,
+                                                          },
+                                                        ],
+                                                      },
+                                                    },
+                                                    Object {
+                                                      "alias": undefined,
+                                                      "arguments": Array [],
+                                                      "directives": Array [],
+                                                      "kind": "Field",
+                                                      "name": Object {
+                                                        "kind": "Name",
+                                                        "value": "following",
+                                                      },
+                                                      "selectionSet": Object {
+                                                        "kind": "SelectionSet",
+                                                        "selections": Array [
+                                                          Object {
+                                                            "alias": undefined,
+                                                            "arguments": Array [],
+                                                            "directives": Array [],
+                                                            "kind": "Field",
+                                                            "name": Object {
+                                                              "kind": "Name",
+                                                              "value": "totalCount",
+                                                            },
+                                                            "selectionSet": undefined,
+                                                          },
+                                                        ],
+                                                      },
+                                                    },
+                                                    Object {
+                                                      "alias": undefined,
+                                                      "arguments": Array [],
+                                                      "directives": Array [],
+                                                      "kind": "Field",
+                                                      "name": Object {
+                                                        "kind": "Name",
+                                                        "value": "projects",
+                                                      },
+                                                      "selectionSet": Object {
+                                                        "kind": "SelectionSet",
+                                                        "selections": Array [
+                                                          Object {
+                                                            "alias": undefined,
+                                                            "arguments": Array [],
+                                                            "directives": Array [],
+                                                            "kind": "Field",
+                                                            "name": Object {
+                                                              "kind": "Name",
+                                                              "value": "totalCount",
+                                                            },
+                                                            "selectionSet": undefined,
+                                                          },
+                                                        ],
+                                                      },
+                                                    },
+                                                  ],
+                                                },
+                                                "typeCondition": Object {
+                                                  "kind": "NamedType",
+                                                  "name": Object {
+                                                    "kind": "Name",
+                                                    "value": "User",
+                                                  },
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "viewer",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "avatarUrl",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 601,
+                      "start": 0,
+                    },
+                  },
+                },
+                "result": Object {
+                  "data": Object {
+                    "search": Object {
+                      "edges": Array [
+                        Object {
+                          "node": Object {
+                            "avatarUrl": "https://avatars1.githubusercontent.com/u/2946769?v=4",
+                            "followers": Object {
+                              "totalCount": 2251,
+                            },
+                            "following": Object {
+                              "totalCount": 68,
+                            },
+                            "login": "login",
+                            "name": "name",
+                            "projects": Object {
+                              "totalCount": 0,
+                            },
+                            "repositories": Object {
+                              "totalCount": 172,
+                            },
+                            "starredRepositories": Object {
+                              "totalCount": 648,
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  },
+                },
+              },
+            ],
+          },
+        },
+        "localState": LocalState {
+          "cache": InMemoryCache {
+            "addTypename": false,
+            "cacheKeyRoot": KeyTrie {
+              "weakness": true,
+            },
+            "config": Object {
+              "addTypename": false,
+              "dataIdFromObject": [Function],
+              "fragmentMatcher": HeuristicFragmentMatcher {},
+              "freezeResults": false,
+              "resultCaching": true,
+            },
+            "data": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "maybeBroadcastWatch": [Function],
+            "optimisticData": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "silenceBroadcast": false,
+            "storeReader": StoreReader {
+              "executeSelectionSet": [Function],
+              "executeStoreQuery": [Function],
+              "executeSubSelectedArray": [Function],
+              "freezeResults": false,
+            },
+            "storeWriter": StoreWriter {},
+            "typenameDocumentCache": Map {},
+            "watches": Set {},
+          },
+          "client": [Circular],
+        },
+        "mutationStore": MutationStore {
+          "store": Object {},
+        },
+        "onBroadcast": [Function],
+        "pollingInfoByQueryId": Map {},
+        "queries": Map {},
+        "queryDeduplication": true,
+        "queryStore": QueryStore {
+          "store": Object {},
+        },
+        "ssrMode": false,
+        "transformCache": WeakMap {},
+      },
+      "reFetchObservableQueries": [Function],
+      "resetStore": [Function],
+      "resetStoreCallbacks": Array [],
+      "store": DataStore {
+        "cache": InMemoryCache {
+          "addTypename": false,
+          "cacheKeyRoot": KeyTrie {
+            "weakness": true,
+          },
+          "config": Object {
+            "addTypename": false,
+            "dataIdFromObject": [Function],
+            "fragmentMatcher": HeuristicFragmentMatcher {},
+            "freezeResults": false,
+            "resultCaching": true,
+          },
+          "data": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "maybeBroadcastWatch": [Function],
+          "optimisticData": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "silenceBroadcast": false,
+          "storeReader": StoreReader {
+            "executeSelectionSet": [Function],
+            "executeStoreQuery": [Function],
+            "executeSubSelectedArray": [Function],
+            "freezeResults": false,
+          },
+          "storeWriter": StoreWriter {},
+          "typenameDocumentCache": Map {},
+          "watches": Set {},
+        },
+      },
+      "typeDefs": undefined,
+      "version": "2.6.4",
+      "watchQuery": [Function],
+    }
+  }
+>
+  <QueryComponent
+    navigation={
+      Object {
+        "navigate": [MockFunction],
+      }
+    }
+  />
+</ApolloProvider>
+`;
+
+exports[`ListScreen tests should render without error 1`] = `
+<Query
+  query={
+    Object {
+      "definitions": Array [
+        Object {
+          "directives": Array [],
+          "kind": "OperationDefinition",
+          "name": undefined,
+          "operation": "query",
+          "selectionSet": Object {
+            "kind": "SelectionSet",
+            "selections": Array [
+              Object {
+                "alias": undefined,
+                "arguments": Array [
+                  Object {
+                    "kind": "Argument",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "query",
+                    },
+                    "value": Object {
+                      "block": false,
+                      "kind": "StringValue",
+                      "value": "location:lagos",
+                    },
+                  },
+                  Object {
+                    "kind": "Argument",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "type",
+                    },
+                    "value": Object {
+                      "kind": "EnumValue",
+                      "value": "USER",
+                    },
+                  },
+                  Object {
+                    "kind": "Argument",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "first",
+                    },
+                    "value": Object {
+                      "kind": "IntValue",
+                      "value": "100",
+                    },
+                  },
+                ],
+                "directives": Array [],
+                "kind": "Field",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "search",
+                },
+                "selectionSet": Object {
+                  "kind": "SelectionSet",
+                  "selections": Array [
+                    Object {
+                      "alias": undefined,
+                      "arguments": Array [],
+                      "directives": Array [],
+                      "kind": "Field",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "userCount",
+                      },
+                      "selectionSet": undefined,
+                    },
+                    Object {
+                      "alias": undefined,
+                      "arguments": Array [],
+                      "directives": Array [],
+                      "kind": "Field",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "edges",
+                      },
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "node",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "directives": Array [],
+                                  "kind": "InlineFragment",
+                                  "selectionSet": Object {
+                                    "kind": "SelectionSet",
+                                    "selections": Array [
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "name",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "login",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "avatarUrl",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "starredRepositories",
+                                        },
+                                        "selectionSet": Object {
+                                          "kind": "SelectionSet",
+                                          "selections": Array [
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "totalCount",
+                                              },
+                                              "selectionSet": undefined,
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "repositories",
+                                        },
+                                        "selectionSet": Object {
+                                          "kind": "SelectionSet",
+                                          "selections": Array [
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "totalCount",
+                                              },
+                                              "selectionSet": undefined,
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "followers",
+                                        },
+                                        "selectionSet": Object {
+                                          "kind": "SelectionSet",
+                                          "selections": Array [
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "totalCount",
+                                              },
+                                              "selectionSet": undefined,
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "following",
+                                        },
+                                        "selectionSet": Object {
+                                          "kind": "SelectionSet",
+                                          "selections": Array [
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "totalCount",
+                                              },
+                                              "selectionSet": undefined,
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "projects",
+                                        },
+                                        "selectionSet": Object {
+                                          "kind": "SelectionSet",
+                                          "selections": Array [
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "totalCount",
+                                              },
+                                              "selectionSet": undefined,
+                                            },
+                                          ],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                  "typeCondition": Object {
+                                    "kind": "NamedType",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "User",
+                                    },
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+              Object {
+                "alias": undefined,
+                "arguments": Array [],
+                "directives": Array [],
+                "kind": "Field",
+                "name": Object {
+                  "kind": "Name",
+                  "value": "viewer",
+                },
+                "selectionSet": Object {
+                  "kind": "SelectionSet",
+                  "selections": Array [
+                    Object {
+                      "alias": undefined,
+                      "arguments": Array [],
+                      "directives": Array [],
+                      "kind": "Field",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "avatarUrl",
+                      },
+                      "selectionSet": undefined,
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+          "variableDefinitions": Array [],
+        },
+      ],
+      "kind": "Document",
+      "loc": Object {
+        "end": 601,
+        "start": 0,
+      },
+    }
+  }
+>
+  <Component />
+</Query>
+`;

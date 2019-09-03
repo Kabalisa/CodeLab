@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileScreen tests should render without error 1`] = `
+<View>
+  <Header
+    navigation={
+      Object {
+        "getParam": [MockFunction] {
+          "calls": Array [
+            Array [
+              "item",
+            ],
+          ],
+          "results": Array [
+            Object {
+              "type": "return",
+              "value": Object {
+                "node": Object {
+                  "login": "name",
+                  "repositories": Object {
+                    "totalCount": 5,
+                  },
+                  "starredRepositories": Object {
+                    "totalCount": 5,
+                  },
+                },
+              },
+            },
+          ],
+        },
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "height": 695,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": undefined,
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 110,
+          "height": 220,
+          "marginVertical": 15,
+          "width": 220,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "fontSize": 24,
+          "fontWeight": "bold",
+          "marginBottom": 25,
+        }
+      }
+    >
+      name
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+        }
+      }
+    >
+      Github URL:
+    </Text>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      id="browser"
+      onPress={[Function]}
+    >
+      <Text
+        style={
+          Object {
+            "color": "#5075D4",
+            "fontSize": 18,
+            "marginBottom": 20,
+          }
+        }
+      >
+        https://github.com/name
+      </Text>
+    </TouchableOpacity>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginBottom": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "bottom": 6,
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "marginRight": 10,
+          }
+        }
+      >
+        5
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 18,
+          }
+        }
+      >
+        repos
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "bottom": 6,
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "marginRight": 10,
+          }
+        }
+      >
+        5
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 18,
+          }
+        }
+      >
+        starring
+      </Text>
+    </View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      id="share"
+      onPress={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#5075D4",
+            "borderColor": "#5075D4",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginTop": 40,
+            "padding": 10,
+            "width": 230,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Share Profile
+        </Text>
+      </View>
+    </TouchableOpacity>
+  </View>
+  <Footer />
+</View>
+`;

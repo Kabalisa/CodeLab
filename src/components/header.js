@@ -42,7 +42,7 @@ class Header extends Component {
 
 const styles = StyleSheet.create({
   headerStyle: {
-    height: 85,
+    height: '11%',
     flexDirection: 'row',
     borderBottomColor: '#5075D4',
     borderBottomWidth: 1
@@ -52,12 +52,12 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     alignSelf: 'flex-end',
-    bottom: 8,
-    left: 8
+    bottom: '2%',
+    left: '10%'
   },
   logoutStyle: {
-    marginLeft: 240,
-    marginTop: 20
+    marginLeft: '55%',
+    marginTop: '3%'
   },
   logoutViewStyle: {
     borderWidth: 1,

@@ -6,6 +6,7 @@ const UserCard = ({ navigation, item }) => {
   return (
     <View style={styles.viewStyle}>
       <TouchableOpacity
+        id='image'
         onPress={() => navigation.navigate('Profile', { item })}
       >
         <Image
@@ -14,6 +15,7 @@ const UserCard = ({ navigation, item }) => {
         />
       </TouchableOpacity>
       <TouchableOpacity
+        id='name'
         style={styles.touchableStyle}
         onPress={() => navigation.navigate('Profile', { item })}
       >

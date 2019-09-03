@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header component test renders without error 1`] = `
+<View
+  style={
+    Object {
+      "borderBottomColor": "#5075D4",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "height": 85,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "flex-end",
+        "bottom": 8,
+        "color": "#5075D4",
+        "fontSize": 24,
+        "fontWeight": "bold",
+        "left": 8,
+      }
+    }
+  >
+    CodeLab
+  </Text>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Object {
+        "marginLeft": 240,
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#5075D4",
+          "borderColor": "#5075D4",
+          "borderWidth": 1,
+          "padding": 4,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+          }
+        }
+      >
+        Log Out
+      </Text>
+    </View>
+  </TouchableOpacity>
+</View>
+`;

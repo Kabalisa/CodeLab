@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginScreen tests should render without error 1`] = `
+<View
+  style={
+    Object {
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#5075D4",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "height": "11%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "bottom": "2%",
+          "color": "#5075D4",
+          "fontSize": 24,
+          "fontWeight": "bold",
+          "left": "10%",
+        }
+      }
+    >
+      CodeLab
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "height": "83%",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#5075D4",
+            "borderColor": "#5075D4",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 5,
+            "width": 250,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "fontWeight": "bold",
+              "right": 3,
+              "top": 16,
+            }
+          }
+        >
+          Login With
+        </Text>
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 50,
+              "width": 50,
+            }
+          }
+        />
+      </View>
+    </TouchableOpacity>
+  </View>
+  <Footer />
+</View>
+`;

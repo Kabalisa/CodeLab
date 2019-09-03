@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component test should render without error 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#5075D4",
+      "flexDirection": "row",
+      "height": "6%",
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 14,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Copyright Codelab 2019
+  </Text>
+</View>
+`;

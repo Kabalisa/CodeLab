@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListScreen tests should render without error 1`] = `
+<View>
+  <Header
+    navigation={
+      Object {
+        "navigate": [MockFunction],
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "column",
+        "height": 695,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+          "left": 15,
+          "top": 20,
+        }
+      }
+    >
+      Java Developers In Lagos:
+    </Text>
+    <View
+      style={
+        Object {
+          "height": 600,
+          "marginHorizontal": 30,
+          "marginTop": 50,
+        }
+      }
+    >
+      <QueryComponent
+        navigation={
+          Object {
+            "navigate": [MockFunction],
+          }
+        }
+      />
+    </View>
+  </View>
+  <Footer />
+</View>
+`;

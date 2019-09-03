@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserCard component test renders without error 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "marginTop": 20,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    id="image"
+    onPress={[Function]}
+  >
+    <Image
+      source={
+        Object {
+          "uri": "avatarUrl",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 35,
+          "height": 70,
+          "width": 70,
+        }
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    id="name"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignSelf": "flex-end",
+        "bottom": 5,
+        "left": 30,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      name
+    </Text>
+  </TouchableOpacity>
+</View>
+`;
