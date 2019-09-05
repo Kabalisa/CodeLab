@@ -12,7 +12,7 @@ const Footer = () => {
 const styles = StyleSheet.create({
   footerStyle: {
     backgroundColor: '#5075D4',
-    height: 30,
+    height: '6%',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center'

@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen tests should render without error 1`] = `
+<View
+  style={
+    Object {
+      "height": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderBottomColor": "#5075D4",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "height": "11%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "bottom": "2%",
+          "color": "#5075D4",
+          "fontSize": 24,
+          "fontWeight": "bold",
+          "left": "10%",
+        }
+      }
+    >
+      CodeLab
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "height": "89%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 24,
+          "fontWeight": "bold",
+          "marginHorizontal": "9%",
+          "top": "10%",
+          "zIndex": 2,
+        }
+      }
+    >
+      Find Java Developers In Lagos
+    </Text>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "marginHorizontal": "43%",
+          "top": "73%",
+          "zIndex": 2,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 35,
+            "width": 35,
+            "zIndex": 2,
+          }
+        }
+      />
+    </TouchableOpacity>
+    <View
+      style={
+        Object {
+          "height": "100%",
+          "position": "absolute",
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": "100%",
+            "opacity": 0.7,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

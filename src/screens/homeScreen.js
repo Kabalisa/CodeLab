@@ -5,27 +5,32 @@ import arrow from '../../assets/whiteArrow.png';
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <View>
+    <View style={styles.containerStyle}>
       <View style={styles.headerStyle}>
         <Text style={styles.headerTextStyle}>CodeLab</Text>
       </View>
-      <Text style={styles.textStyle}>Find Java Developers In Lagos</Text>
-      <TouchableOpacity
-        style={styles.highlightStyle}
-        onPress={() => navigation.navigate('Login')}
-      >
-        <Image source={arrow} style={styles.arrowStyle} />
-      </TouchableOpacity>
-      <View style={styles.viewStyle}>
-        <Image source={homeImage} style={styles.imageStyle} />
+      <View style={styles.secondContainerStyle}>
+        <Text style={styles.textStyle}>Find Java Developers In Lagos</Text>
+        <TouchableOpacity
+          style={styles.highlightStyle}
+          onPress={() => navigation.navigate('Login')}
+        >
+          <Image source={arrow} style={styles.arrowStyle} />
+        </TouchableOpacity>
+        <View style={styles.viewStyle}>
+          <Image source={homeImage} style={styles.imageStyle} />
+        </View>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  containerStyle: {
+    height: '100%'
+  },
   headerStyle: {
-    height: 85,
+    height: '11%',
     flexDirection: 'row',
     borderBottomColor: '#5075D4',
     borderBottomWidth: 1
@@ -35,23 +40,26 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     alignSelf: 'flex-end',
-    bottom: 8,
-    left: 8
+    bottom: '2%',
+    left: '10%'
   },
   viewStyle: {
-    height: 723,
-    bottom: 64
+    height: '100%',
+    position: 'absolute'
+  },
+  secondContainerStyle: {
+    height: '89%'
   },
   imageStyle: {
-    height: 723,
+    height: '100%',
     opacity: 0.7
   },
   textStyle: {
     color: 'white',
     fontSize: 24,
     fontWeight: 'bold',
-    left: 35,
-    top: 75,
+    marginHorizontal: '9%',
+    top: '10%',
     zIndex: 2
   },
   arrowStyle: {
@@ -60,8 +68,8 @@ const styles = StyleSheet.create({
     zIndex: 2
   },
   highlightStyle: {
-    left: 180,
-    top: 580,
+    marginHorizontal: '43%',
+    top: '73%',
     zIndex: 2
   }
 });

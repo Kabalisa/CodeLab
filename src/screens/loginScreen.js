@@ -14,7 +14,7 @@ import initializeFirebase from '../helpers/firebaseConfig';
 import getGithubToken from '../helpers/getGithubToken';
 
 const GithubStorageKey = 'githubtoken';
-const signIn = async token => {
+export const signIn = async token => {
   try {
     if (!token) {
       const token = await getGithubToken();
@@ -32,7 +32,7 @@ const signIn = async token => {
   }
 };
 
-const attemptToRestoreAuth = async () => {
+export const attemptToRestoreAuth = async () => {
   let token = await AsyncStorage.getItem(GithubStorageKey);
   if (token) {
     return signIn(token);
@@ -61,7 +61,7 @@ class LoginScreen extends Component {
   };
   render() {
     return (
-      <View>
+      <View style={styles.containerStyle}>
         <View style={styles.headerStyle}>
           <Text style={styles.headerTextStyle}>CodeLab</Text>
         </View>
@@ -80,8 +80,11 @@ class LoginScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  containerStyle: {
+    height: '100%'
+  },
   headerStyle: {
-    height: 85,
+    height: '11%',
     flexDirection: 'row',
     borderBottomColor: '#5075D4',
     borderBottomWidth: 1
@@ -91,13 +94,13 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     alignSelf: 'flex-end',
-    bottom: 8,
-    left: 8
+    bottom: '2%',
+    left: '10%'
   },
   parentStyle: {
     flexDirection: 'column',
     alignItems: 'center',
-    height: 695,
+    height: '83%',
     justifyContent: 'center'
   },
   viewStyle: {

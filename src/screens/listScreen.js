@@ -1,57 +1,19 @@
 import React, { Component } from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  FlatList,
-  ActivityIndicator
-} from 'react-native';
-import { Query } from 'react-apollo';
+import { Text, View, StyleSheet } from 'react-native';
 import Header from '../components/header';
-import UserCard from '../components/userCard';
 import Footer from '../components/footer';
-import { lagosJavaDevelopers } from '../helpers/queries';
+import QueryComponent from '../components/Query';
 
 class ListScreen extends Component {
   render() {
     const { navigation } = this.props;
     return (
-      <View>
+      <View style={styles.containerStyle}>
         <Header navigation={navigation} />
         <View style={styles.viewStyle}>
           <Text style={styles.textStyle}>Java Developers In Lagos:</Text>
           <View style={styles.viewCardStyle}>
-            <Query query={lagosJavaDevelopers}>
-              {({ loading, error, data }) => {
-                if (loading) {
-                  return (
-                    <View style={styles.indicatorStyle}>
-                      <ActivityIndicator size='large' color='#5075D4' />
-                    </View>
-                  );
-                }
-                if (error) {
-                  alert('An Error Occured');
-                  return (
-                    <Text style={styles.errorStyle}>
-                      An Error Occured!. Try Again
-                    </Text>
-                  );
-                }
-                if (data) {
-                  const { search } = data;
-                  return (
-                    <FlatList
-                      keyExtractor={edge => edge.node.login}
-                      data={search.edges}
-                      renderItem={({ item }) => {
-                        return <UserCard navigation={navigation} item={item} />;
-                      }}
-                    />
-                  );
-                }
-              }}
-            </Query>
+            <QueryComponent navigation={navigation} />
           </View>
         </View>
         <Footer />
@@ -61,6 +23,9 @@ class ListScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  containerStyle: {
+    height: '100%'
+  },
   textStyle: {
     fontSize: 18,
     fontWeight: 'bold',
@@ -68,19 +33,13 @@ const styles = StyleSheet.create({
     top: 20
   },
   viewStyle: {
-    height: 695,
+    height: '83%',
     flexDirection: 'column'
   },
   viewCardStyle: {
-    marginHorizontal: 30,
-    marginTop: 50,
-    height: 600
-  },
-  indicatorStyle: {
-    marginVertical: 300
-  },
-  errorStyle: {
-    fontSize: 20
+    marginHorizontal: '6%',
+    marginTop: '11%',
+    height: '89%'
   }
 });
 

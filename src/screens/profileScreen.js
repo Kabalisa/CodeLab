@@ -5,7 +5,8 @@ import {
   Image,
   StyleSheet,
   Share,
-  TouchableOpacity
+  TouchableOpacity,
+  ScrollView
 } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 import Header from '../components/header';
@@ -31,36 +32,44 @@ class ProfileScreen extends Component {
     const item = navigation.getParam('item');
     const url = `https://github.com/${item.node.login}`;
     return (
-      <View>
+      <View style={styles.containerStyle}>
         <Header navigation={navigation} />
-        <View style={styles.viewStyle}>
-          <Image
-            source={{ uri: item.node.avatarUrl }}
-            style={styles.imageStyle}
-          />
-          <Text style={styles.usernameStyle}>{item.node.login}</Text>
-          <Text style={styles.textOneStyle}>Github URL:</Text>
-          <TouchableOpacity onPress={() => this.handleOpenBrowser(url)}>
-            <Text style={styles.textTwoStyle}>{url}</Text>
-          </TouchableOpacity>
-          <View style={styles.viewOneStyle}>
-            <Text style={styles.textThreeStyle}>
-              {item.node.repositories.totalCount}
-            </Text>
-            <Text style={styles.textFourStyle}>repos</Text>
-          </View>
-          <View style={styles.viewTwoStyle}>
-            <Text style={styles.textThreeStyle}>
-              {item.node.starredRepositories.totalCount}
-            </Text>
-            <Text style={styles.textFourStyle}>starring</Text>
-          </View>
-          <TouchableOpacity onPress={() => this.handleShare(item.node.login)}>
-            <View style={styles.buttonStyle}>
-              <Text style={styles.textstyle}>Share Profile</Text>
+        <ScrollView style={{ flex: 1 }} scrollEnabled={true}>
+          <View style={styles.viewStyle}>
+            <Image
+              source={{ uri: item.node.avatarUrl }}
+              style={styles.imageStyle}
+            />
+            <Text style={styles.usernameStyle}>{item.node.login}</Text>
+            <Text style={styles.textOneStyle}>Github URL:</Text>
+            <TouchableOpacity
+              id='browser'
+              onPress={() => this.handleOpenBrowser(url)}
+            >
+              <Text style={styles.textTwoStyle}>{url}</Text>
+            </TouchableOpacity>
+            <View style={styles.viewOneStyle}>
+              <Text style={styles.textThreeStyle}>
+                {item.node.repositories.totalCount}
+              </Text>
+              <Text style={styles.textFourStyle}>repos</Text>
             </View>
-          </TouchableOpacity>
-        </View>
+            <View style={styles.viewTwoStyle}>
+              <Text style={styles.textThreeStyle}>
+                {item.node.starredRepositories.totalCount}
+              </Text>
+              <Text style={styles.textFourStyle}>starring</Text>
+            </View>
+            <TouchableOpacity
+              id='share'
+              onPress={() => this.handleShare(item.node.login)}
+            >
+              <View style={styles.buttonStyle}>
+                <Text style={styles.textstyle}>Share Profile</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
         <Footer />
       </View>
     );
@@ -68,10 +77,13 @@ class ProfileScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  containerStyle: {
+    height: '100%'
+  },
   viewStyle: {
     flexDirection: 'column',
     alignItems: 'center',
-    height: 695
+    height: '83%'
   },
   imageStyle: {
     width: 220,

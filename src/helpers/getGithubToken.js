@@ -19,7 +19,7 @@ const githubFields = [
   'read:gpg_key'
 ];
 
-const authUrlWithId = (id, fields) => {
+export const authUrlWithId = (id, fields) => {
   return (
     `https://github.com/login/oauth/authorize` +
     `?client_id=${id}` +
@@ -28,7 +28,7 @@ const authUrlWithId = (id, fields) => {
   );
 };
 
-const createTokenWithCode = async code => {
+export const createTokenWithCode = async code => {
   const url =
     `https://github.com/login/oauth/access_token` +
     `?client_id=${github.id}` +
